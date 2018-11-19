@@ -1,0 +1,1596 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/16/2018 1:03:18 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="CIPL-0023"
+  DTS:CreatorName="CIPL-0023\Developer"
+  DTS:DTSID="{747B1FA8-9884-421B-ADAC-F846A655902D}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.0900.30"
+  DTS:LocaleID="16393"
+  DTS:ObjectName="JsonParser"
+  DTS:PackageType="5"
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{F1441F47-DDD9-44A8-995C-1D634AE1496F}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[CIPL-0023\MSSQLDEVLOPER.Sample]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{BDB82368-86DB-4099-8373-3C79246E6194}"
+      DTS:ObjectName="CIPL-0023\MSSQLDEVLOPER.Sample">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=CIPL-0023\MSSQLDEVLOPER;Initial Catalog=Sample;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{E2FABFD1-53CF-4297-99CC-C7D5F6A7A484}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="16393"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\MyLearning\New folder\Json.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="_JSON"
+              DTS:DTSID="{5A918D50-8703-4AA3-B144-31A2D8AF321C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="_RowIndex"
+              DTS:DTSID="{F6722D2B-124E-4A29-8AE0-CCFEA17E24B8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="_ParentKeyField"
+              DTS:DTSID="{C594242E-3082-4374-9616-07F3443058CF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="particulars"
+              DTS:DTSID="{0DFEEDF0-3665-42DB-AD5F-007FC99E063D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="_1951"
+              DTS:DTSID="{D8229D6F-7F06-413E-9BAA-7A7D11D4CAED}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="_1961"
+              DTS:DTSID="{4EA25338-27D6-4242-BBD1-8548980A2EEC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="_1971"
+              DTS:DTSID="{DD2369C4-1DD3-4AFC-8495-8BB50C4A0431}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="_1981"
+              DTS:DTSID="{C689179E-B8A8-486D-9907-B86992ACE330}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="_1991"
+              DTS:DTSID="{C1FB71F6-67CE-4FE6-AA99-AD1D493F0D2F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="_2001"
+              DTS:DTSID="{8F5C691B-499C-4C5A-A622-83DD97A66B06}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="_2011"
+              DTS:DTSID="{BCD23AC4-9903-44B2-B42F-7E1C96EFA814}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[HTTP Connection Manager]"
+      DTS:CreationName="HTTP (KingswaySoft)"
+      DTS:DTSID="{83CFAFE5-490D-4128-AE7F-E16D773CA5E3}"
+      DTS:ObjectName="HTTP Connection Manager">
+      <DTS:ObjectData>
+        <ConnectionManager
+          ConnectionString="BaseUrl=&quot;https://api.data.gov.in/resource/45eeb6fa-438c-446a-bb4d-b2074ae2f19c?api-key=579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b&amp;format=json&amp;offset=0&amp;limit=10&quot;;AuthenticationMode=Credentials;PathToTokenFile=;AccessTokenRequestLocation=HttpHeader;Domain=;UserName=;ProxyMode=NoProxy;ProxyUsername=;ProxyServer=;ProxyServerPort=0;ThrottleRate=0;ServiceTimeout=120;RetryOnIntermittentErrors=True;ChunkSize=0;CertificateLocation=Store;PathToCertificate=;IgnoreCertificateErrors=False;CustomHeaders={};HttpMethod=POST" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{3BBFC9B5-0AD7-4932-9E97-C52D6A11FC8F}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\JSON Source"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="KingswaySoft Inc.; http://www.kingswaysoft.com; support@kingswaysoft.com; Copyright (c) 2011-2018 KingswaySoft Inc."
+              description="Retrieves JSON documents and extracts them into columns."
+              name="JSON Source"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="A list of the output nodes in the Json design that are ignored."
+                  expressionType="Notify"
+                  name="IgnoredOutputs">[]</property>
+                <property
+                  dataType="System.String"
+                  description="The template of the expected incoming Json."
+                  expressionType="Notify"
+                  name="Design">{"jsonName":"$","dataName":"Root","type":"Object","children":[{"jsonName":"index_name","dataName":"index_name","type":"Value"},{"jsonName":"title","dataName":"title","type":"Value"},{"jsonName":"desc","dataName":"desc","type":"Value"},{"jsonName":"created","dataName":"created","type":"Value"},{"jsonName":"updated","dataName":"updated","type":"Value"},{"jsonName":"visualizable","dataName":"visualizable","type":"Value"},{"jsonName":"source","dataName":"source","type":"Value"},{"jsonName":"org_type","dataName":"org_type","type":"Value"},{"jsonName":"org","dataName":"org","type":"Array"},{"jsonName":"sector","dataName":"sector","type":"Array"},{"jsonName":"catalog_uuid","dataName":"catalog_uuid","type":"Value"},{"jsonName":"status","dataName":"status","type":"Value"},{"jsonName":"field","dataName":"field","type":"Array","children":[{"jsonName":"id","dataName":"id","type":"Value"},{"jsonName":"name","dataName":"name","type":"Value"},{"jsonName":"type","dataName":"type","type":"Value"}]},{"jsonName":"created_date","dataName":"created_date","type":"Value"},{"jsonName":"updated_date","dataName":"updated_date","type":"Value"},{"jsonName":"active","dataName":"active","type":"Value"},{"jsonName":"message","dataName":"message","type":"Value"},{"jsonName":"total","dataName":"total","type":"Value"},{"jsonName":"count","dataName":"count","type":"Value"},{"jsonName":"limit","dataName":"limit","type":"Value"},{"jsonName":"offset","dataName":"offset","type":"Value"},{"jsonName":"records","dataName":"records","type":"Array","children":[{"jsonName":"particulars","dataName":"particulars","type":"Value"},{"jsonName":"_1951","dataName":"_1951","type":"Value"},{"jsonName":"_1961","dataName":"_1961","type":"Value"},{"jsonName":"_1971","dataName":"_1971","type":"Value"},{"jsonName":"_1981","dataName":"_1981","type":"Value"},{"jsonName":"_1991","dataName":"_1991","type":"Value"},{"jsonName":"_2001","dataName":"_2001","type":"Value"},{"jsonName":"_2011","dataName":"_2011","type":"Value"}]},{"jsonName":"version","dataName":"version","type":"Value"}]}</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indicates how null values are represented in the incoming JSON."
+                  expressionType="Notify"
+                  name="NullMode"
+                  typeConverter="KingswaySoft.IntegrationToolkit.ProductivityPack.JsonExtractNullMode, KingswaySoft.IntegrationToolkit.ProductivityPack, Version=1.0.2017.0, Culture=neutral, PublicKeyToken=705df8e0751bcea7">0</property>
+                <property
+                  dataType="System.String"
+                  description="The relative path of the HTTP request that will be combined with the base path from the connection manager."
+                  expressionType="Notify"
+                  name="RelativePath">{"IsExpression":false,"Value":"https://api.data.gov.in/resource/45eeb6fa-438c-446a-bb4d-b2074ae2f19c?api-key=579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b&amp;format=json&amp;offset=0&amp;limit=10"}</property>
+                <property
+                  dataType="System.String"
+                  description="The body of the HTTP request."
+                  expressionType="Notify"
+                  name="RequestBody">{"IsExpression":false,"Value":""}</property>
+                <property
+                  dataType="System.String"
+                  description="The headers that will be used in the request."
+                  expressionType="Notify"
+                  name="RequestHeaders">[]</property>
+                <property
+                  dataType="System.String"
+                  description="The query string parameters that will be used in the request."
+                  expressionType="Notify"
+                  name="RequestQueryStringParameters">[]</property>
+                <property
+                  dataType="System.String"
+                  description="The expression that determines if requests should keep being sent."
+                  expressionType="Notify"
+                  name="RequestAgainRule"></property>
+                <property
+                  dataType="System.String"
+                  description="The HTTP Method to use when sending requests."
+                  expressionType="Notify"
+                  name="HttpMethod">GET</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the path to the Item to get the json document from."
+                  expressionType="Notify"
+                  name="LocalFilePath"></property>
+                <property
+                  dataType="System.String"
+                  description="The encoding that will be used to read the json document."
+                  expressionType="Notify"
+                  name="LocalFileEncoding">Unicode (UTF-8)</property>
+                <property
+                  dataType="System.Int32"
+                  description="The max number of identical requests that will be before an error is raised."
+                  expressionType="Notify"
+                  name="MaxIdenticalRequests">1</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">KingswaySoft.IntegrationToolkit.ProductivityPack.JsonSourceComponent</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\JSON Source.Connections[HTTP (KingswaySoft)]"
+                  connectionManagerID="Package.ConnectionManagers[HTTP Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[HTTP Connection Manager]"
+                  description="ProductivityPack"
+                  name="HTTP (KingswaySoft)" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\JSON Source.Outputs[Root]"
+                  name="Root">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.Int32"
+                      description="The id of the parent output of this output."
+                      name="ParentId">#{Package\Data Flow Task\-1:invalid}</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies if this is a collection of items (may only be false for the root item)."
+                      name="IsCollection">false</property>
+                    <property
+                      dataType="System.String"
+                      description="The JPath to this output in the Json document."
+                      name="JPath">$</property>
+                    <property
+                      containsID="true"
+                      dataType="System.Boolean"
+                      description="Specifies if the specified output represents an array of objects or an array of values."
+                      name="IsComplex">true</property>
+                    <property
+                      containsID="true"
+                      dataType="System.Int32"
+                      description="The id of the field that contains the fully formed JSON for the current level."
+                      expressionType="Notify"
+                      name="JsonField">#{Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[_JSON]}</property>
+                    <property
+                      containsID="true"
+                      dataType="System.Int32"
+                      description="The id of the field that is an auto generated row index."
+                      name="RowIndexField">#{Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[_RowIndex]}</property>
+                    <property
+                      containsID="true"
+                      dataType="System.Int32"
+                      description="The key field of this output. Used to show relationship of parent and child outputs."
+                      name="KeyField">#{Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[_RowIndex]}</property>
+                    <property
+                      containsID="true"
+                      dataType="System.Int32"
+                      description="The key field of this outputs parent. Used to show relationship of parent and child outputs."
+                      name="ParentKeyField">#{Package\Data Flow Task\-1:invalid}</property>
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[_JSON]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[_JSON]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[_JSON]"
+                      name="_JSON"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[_RowIndex]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[_RowIndex]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[_RowIndex]"
+                      name="_RowIndex"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[index_name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[index_name]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[index_name]"
+                      name="index_name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[title]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[title]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[title]"
+                      name="title"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[desc]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[desc]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[desc]"
+                      name="desc"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[created]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[created]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[created]"
+                      name="created"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[updated]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[updated]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[updated]"
+                      name="updated"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[visualizable]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[visualizable]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[visualizable]"
+                      name="visualizable"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[source]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[source]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[source]"
+                      name="source"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[org_type]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[org_type]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[org_type]"
+                      name="org_type"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[catalog_uuid]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[catalog_uuid]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[catalog_uuid]"
+                      name="catalog_uuid"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[status]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[status]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[status]"
+                      name="status"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[created_date]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[created_date]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[created_date]"
+                      name="created_date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[updated_date]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[updated_date]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[updated_date]"
+                      name="updated_date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[active]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[active]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[active]"
+                      name="active"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[message]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[message]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[message]"
+                      name="message"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[total]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[total]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[total]"
+                      name="total"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[count]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[count]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[count]"
+                      name="count"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[limit]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[limit]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[limit]"
+                      name="limit"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[offset]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[offset]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[offset]"
+                      name="offset"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[version]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[version]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[Root].Columns[version]"
+                      name="version"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[_JSON]"
+                      dataType="nText"
+                      name="_JSON" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[_RowIndex]"
+                      dataType="i4"
+                      name="_RowIndex" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[index_name]"
+                      dataType="wstr"
+                      length="255"
+                      name="index_name">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="The id of the parent output of this output."
+                          name="JPath">$['index_name']</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[title]"
+                      dataType="wstr"
+                      length="255"
+                      name="title">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="The id of the parent output of this output."
+                          name="JPath">$['title']</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[desc]"
+                      dataType="wstr"
+                      length="255"
+                      name="desc">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="The id of the parent output of this output."
+                          name="JPath">$['desc']</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[created]"
+                      dataType="wstr"
+                      length="255"
+                      name="created">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="The id of the parent output of this output."
+                          name="JPath">$['created']</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[updated]"
+                      dataType="wstr"
+                      length="255"
+                      name="updated">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="The id of the parent output of this output."
+                          name="JPath">$['updated']</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[visualizable]"
+                      dataType="wstr"
+                      length="255"
+                      name="visualizable">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="The id of the parent output of this output."
+                          name="JPath">$['visualizable']</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[source]"
+                      dataType="wstr"
+                      length="255"
+                      name="source">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="The id of the parent output of this output."
+                          name="JPath">$['source']</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[org_type]"
+                      dataType="wstr"
+                      length="255"
+                      name="org_type">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="The id of the parent output of this output."
+                          name="JPath">$['org_type']</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[catalog_uuid]"
+                      dataType="wstr"
+                      length="255"
+                      name="catalog_uuid">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="The id of the parent output of this output."
+                          name="JPath">$['catalog_uuid']</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[status]"
+                      dataType="wstr"
+                      length="255"
+                      name="status">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="The id of the parent output of this output."
+                          name="JPath">$['status']</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[created_date]"
+                      dataType="wstr"
+                      length="255"
+                      name="created_date">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="The id of the parent output of this output."
+                          name="JPath">$['created_date']</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[updated_date]"
+                      dataType="wstr"
+                      length="255"
+                      name="updated_date">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="The id of the parent output of this output."
+                          name="JPath">$['updated_date']</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[active]"
+                      dataType="wstr"
+                      length="255"
+                      name="active">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="The id of the parent output of this output."
+                          name="JPath">$['active']</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[message]"
+                      dataType="wstr"
+                      length="255"
+                      name="message">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="The id of the parent output of this output."
+                          name="JPath">$['message']</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[total]"
+                      dataType="wstr"
+                      length="255"
+                      name="total">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="The id of the parent output of this output."
+                          name="JPath">$['total']</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[count]"
+                      dataType="wstr"
+                      length="255"
+                      name="count">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="The id of the parent output of this output."
+                          name="JPath">$['count']</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[limit]"
+                      dataType="wstr"
+                      length="255"
+                      name="limit">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="The id of the parent output of this output."
+                          name="JPath">$['limit']</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[offset]"
+                      dataType="wstr"
+                      length="255"
+                      name="offset">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="The id of the parent output of this output."
+                          name="JPath">$['offset']</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[Root].ExternalColumns[version]"
+                      dataType="wstr"
+                      length="255"
+                      name="version">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="The id of the parent output of this output."
+                          name="JPath">$['version']</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\JSON Source.Outputs[org]"
+                  name="org">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.Int32"
+                      description="The id of the parent output of this output."
+                      name="ParentId">#{Package\Data Flow Task\JSON Source.Outputs[Root]}</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies if this is a collection of items (may only be false for the root item)."
+                      name="IsCollection">true</property>
+                    <property
+                      dataType="System.String"
+                      description="The JPath to this output in the Json document."
+                      name="JPath">$['org']</property>
+                    <property
+                      containsID="true"
+                      dataType="System.Boolean"
+                      description="Specifies if the specified output represents an array of objects or an array of values."
+                      name="IsComplex">false</property>
+                    <property
+                      containsID="true"
+                      dataType="System.Int32"
+                      description="The id of the field that contains the fully formed JSON for the current level."
+                      expressionType="Notify"
+                      name="JsonField">#{Package\Data Flow Task\JSON Source.Outputs[org].ExternalColumns[_JSON]}</property>
+                    <property
+                      containsID="true"
+                      dataType="System.Int32"
+                      description="The id of the field that is an auto generated row index."
+                      name="RowIndexField">#{Package\Data Flow Task\JSON Source.Outputs[org].ExternalColumns[_RowIndex]}</property>
+                    <property
+                      containsID="true"
+                      dataType="System.Int32"
+                      description="The key field of this output. Used to show relationship of parent and child outputs."
+                      name="KeyField">#{Package\Data Flow Task\JSON Source.Outputs[org].ExternalColumns[_RowIndex]}</property>
+                    <property
+                      containsID="true"
+                      dataType="System.Int32"
+                      description="The key field of this outputs parent. Used to show relationship of parent and child outputs."
+                      name="ParentKeyField">#{Package\Data Flow Task\JSON Source.Outputs[org].ExternalColumns[_ParentKeyField]}</property>
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[org].Columns[_JSON]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[org].ExternalColumns[_JSON]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[org].Columns[_JSON]"
+                      name="_JSON" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[org].Columns[_RowIndex]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[org].ExternalColumns[_RowIndex]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[org].Columns[_RowIndex]"
+                      name="_RowIndex" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[org].Columns[_ParentKeyField]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[org].ExternalColumns[_ParentKeyField]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[org].Columns[_ParentKeyField]"
+                      name="_ParentKeyField" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[org].Columns[value]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[org].ExternalColumns[value]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[org].Columns[value]"
+                      name="value" />
+                  </outputColumns>
+                  <externalMetadataColumns>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[org].ExternalColumns[_JSON]"
+                      dataType="nText"
+                      name="_JSON" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[org].ExternalColumns[_RowIndex]"
+                      dataType="i4"
+                      name="_RowIndex" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[org].ExternalColumns[_ParentKeyField]"
+                      dataType="i4"
+                      name="_ParentKeyField" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[org].ExternalColumns[value]"
+                      dataType="wstr"
+                      length="255"
+                      name="value">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="The id of the parent output of this output."
+                          name="JPath"></property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\JSON Source.Outputs[sector]"
+                  name="sector">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.Int32"
+                      description="The id of the parent output of this output."
+                      name="ParentId">#{Package\Data Flow Task\JSON Source.Outputs[Root]}</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies if this is a collection of items (may only be false for the root item)."
+                      name="IsCollection">true</property>
+                    <property
+                      dataType="System.String"
+                      description="The JPath to this output in the Json document."
+                      name="JPath">$['sector']</property>
+                    <property
+                      containsID="true"
+                      dataType="System.Boolean"
+                      description="Specifies if the specified output represents an array of objects or an array of values."
+                      name="IsComplex">false</property>
+                    <property
+                      containsID="true"
+                      dataType="System.Int32"
+                      description="The id of the field that contains the fully formed JSON for the current level."
+                      expressionType="Notify"
+                      name="JsonField">#{Package\Data Flow Task\JSON Source.Outputs[sector].ExternalColumns[_JSON]}</property>
+                    <property
+                      containsID="true"
+                      dataType="System.Int32"
+                      description="The id of the field that is an auto generated row index."
+                      name="RowIndexField">#{Package\Data Flow Task\JSON Source.Outputs[sector].ExternalColumns[_RowIndex]}</property>
+                    <property
+                      containsID="true"
+                      dataType="System.Int32"
+                      description="The key field of this output. Used to show relationship of parent and child outputs."
+                      name="KeyField">#{Package\Data Flow Task\JSON Source.Outputs[sector].ExternalColumns[_RowIndex]}</property>
+                    <property
+                      containsID="true"
+                      dataType="System.Int32"
+                      description="The key field of this outputs parent. Used to show relationship of parent and child outputs."
+                      name="ParentKeyField">#{Package\Data Flow Task\JSON Source.Outputs[sector].ExternalColumns[_ParentKeyField]}</property>
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[sector].Columns[_JSON]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[sector].ExternalColumns[_JSON]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[sector].Columns[_JSON]"
+                      name="_JSON" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[sector].Columns[_RowIndex]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[sector].ExternalColumns[_RowIndex]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[sector].Columns[_RowIndex]"
+                      name="_RowIndex" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[sector].Columns[_ParentKeyField]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[sector].ExternalColumns[_ParentKeyField]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[sector].Columns[_ParentKeyField]"
+                      name="_ParentKeyField" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[sector].Columns[value]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[sector].ExternalColumns[value]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[sector].Columns[value]"
+                      name="value" />
+                  </outputColumns>
+                  <externalMetadataColumns>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[sector].ExternalColumns[_JSON]"
+                      dataType="nText"
+                      name="_JSON" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[sector].ExternalColumns[_RowIndex]"
+                      dataType="i4"
+                      name="_RowIndex" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[sector].ExternalColumns[_ParentKeyField]"
+                      dataType="i4"
+                      name="_ParentKeyField" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[sector].ExternalColumns[value]"
+                      dataType="wstr"
+                      length="255"
+                      name="value">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="The id of the parent output of this output."
+                          name="JPath"></property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\JSON Source.Outputs[field]"
+                  name="field">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.Int32"
+                      description="The id of the parent output of this output."
+                      name="ParentId">#{Package\Data Flow Task\JSON Source.Outputs[Root]}</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies if this is a collection of items (may only be false for the root item)."
+                      name="IsCollection">true</property>
+                    <property
+                      dataType="System.String"
+                      description="The JPath to this output in the Json document."
+                      name="JPath">$['field']</property>
+                    <property
+                      containsID="true"
+                      dataType="System.Boolean"
+                      description="Specifies if the specified output represents an array of objects or an array of values."
+                      name="IsComplex">true</property>
+                    <property
+                      containsID="true"
+                      dataType="System.Int32"
+                      description="The id of the field that contains the fully formed JSON for the current level."
+                      expressionType="Notify"
+                      name="JsonField">#{Package\Data Flow Task\JSON Source.Outputs[field].ExternalColumns[_JSON]}</property>
+                    <property
+                      containsID="true"
+                      dataType="System.Int32"
+                      description="The id of the field that is an auto generated row index."
+                      name="RowIndexField">#{Package\Data Flow Task\JSON Source.Outputs[field].ExternalColumns[_RowIndex]}</property>
+                    <property
+                      containsID="true"
+                      dataType="System.Int32"
+                      description="The key field of this output. Used to show relationship of parent and child outputs."
+                      name="KeyField">#{Package\Data Flow Task\JSON Source.Outputs[field].ExternalColumns[_RowIndex]}</property>
+                    <property
+                      containsID="true"
+                      dataType="System.Int32"
+                      description="The key field of this outputs parent. Used to show relationship of parent and child outputs."
+                      name="ParentKeyField">#{Package\Data Flow Task\JSON Source.Outputs[field].ExternalColumns[_ParentKeyField]}</property>
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[field].Columns[_JSON]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[field].ExternalColumns[_JSON]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[field].Columns[_JSON]"
+                      name="_JSON" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[field].Columns[_RowIndex]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[field].ExternalColumns[_RowIndex]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[field].Columns[_RowIndex]"
+                      name="_RowIndex" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[field].Columns[_ParentKeyField]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[field].ExternalColumns[_ParentKeyField]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[field].Columns[_ParentKeyField]"
+                      name="_ParentKeyField" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[field].Columns[id]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[field].ExternalColumns[id]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[field].Columns[id]"
+                      name="id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[field].Columns[name]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[field].ExternalColumns[name]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[field].Columns[name]"
+                      name="name" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[field].Columns[type]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[field].ExternalColumns[type]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[field].Columns[type]"
+                      name="type" />
+                  </outputColumns>
+                  <externalMetadataColumns>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[field].ExternalColumns[_JSON]"
+                      dataType="nText"
+                      name="_JSON" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[field].ExternalColumns[_RowIndex]"
+                      dataType="i4"
+                      name="_RowIndex" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[field].ExternalColumns[_ParentKeyField]"
+                      dataType="i4"
+                      name="_ParentKeyField" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[field].ExternalColumns[id]"
+                      dataType="wstr"
+                      length="255"
+                      name="id">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="The id of the parent output of this output."
+                          name="JPath">$['field'][n]['id']</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[field].ExternalColumns[name]"
+                      dataType="wstr"
+                      length="255"
+                      name="name">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="The id of the parent output of this output."
+                          name="JPath">$['field'][n]['name']</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[field].ExternalColumns[type]"
+                      dataType="wstr"
+                      length="255"
+                      name="type">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="The id of the parent output of this output."
+                          name="JPath">$['field'][n]['type']</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\JSON Source.Outputs[records]"
+                  name="records">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.Int32"
+                      description="The id of the parent output of this output."
+                      name="ParentId">#{Package\Data Flow Task\JSON Source.Outputs[Root]}</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies if this is a collection of items (may only be false for the root item)."
+                      name="IsCollection">true</property>
+                    <property
+                      dataType="System.String"
+                      description="The JPath to this output in the Json document."
+                      name="JPath">$['records']</property>
+                    <property
+                      containsID="true"
+                      dataType="System.Boolean"
+                      description="Specifies if the specified output represents an array of objects or an array of values."
+                      name="IsComplex">true</property>
+                    <property
+                      containsID="true"
+                      dataType="System.Int32"
+                      description="The id of the field that contains the fully formed JSON for the current level."
+                      expressionType="Notify"
+                      name="JsonField">#{Package\Data Flow Task\JSON Source.Outputs[records].ExternalColumns[_JSON]}</property>
+                    <property
+                      containsID="true"
+                      dataType="System.Int32"
+                      description="The id of the field that is an auto generated row index."
+                      name="RowIndexField">#{Package\Data Flow Task\JSON Source.Outputs[records].ExternalColumns[_RowIndex]}</property>
+                    <property
+                      containsID="true"
+                      dataType="System.Int32"
+                      description="The key field of this output. Used to show relationship of parent and child outputs."
+                      name="KeyField">#{Package\Data Flow Task\JSON Source.Outputs[records].ExternalColumns[_RowIndex]}</property>
+                    <property
+                      containsID="true"
+                      dataType="System.Int32"
+                      description="The key field of this outputs parent. Used to show relationship of parent and child outputs."
+                      name="ParentKeyField">#{Package\Data Flow Task\JSON Source.Outputs[records].ExternalColumns[_ParentKeyField]}</property>
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[records].Columns[_JSON]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[records].ExternalColumns[_JSON]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[records].Columns[_JSON]"
+                      name="_JSON" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[records].Columns[_RowIndex]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[records].ExternalColumns[_RowIndex]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[records].Columns[_RowIndex]"
+                      name="_RowIndex" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[records].Columns[_ParentKeyField]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[records].ExternalColumns[_ParentKeyField]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[records].Columns[_ParentKeyField]"
+                      name="_ParentKeyField" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[records].Columns[particulars]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[records].ExternalColumns[particulars]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[records].Columns[particulars]"
+                      name="particulars" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[records].Columns[_1951]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[records].ExternalColumns[_1951]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[records].Columns[_1951]"
+                      name="_1951" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[records].Columns[_1961]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[records].ExternalColumns[_1961]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[records].Columns[_1961]"
+                      name="_1961" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[records].Columns[_1971]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[records].ExternalColumns[_1971]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[records].Columns[_1971]"
+                      name="_1971" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[records].Columns[_1981]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[records].ExternalColumns[_1981]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[records].Columns[_1981]"
+                      name="_1981" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[records].Columns[_1991]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[records].ExternalColumns[_1991]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[records].Columns[_1991]"
+                      name="_1991" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[records].Columns[_2001]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[records].ExternalColumns[_2001]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[records].Columns[_2001]"
+                      name="_2001" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[records].Columns[_2011]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\JSON Source.Outputs[records].ExternalColumns[_2011]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[records].Columns[_2011]"
+                      name="_2011" />
+                  </outputColumns>
+                  <externalMetadataColumns>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[records].ExternalColumns[_JSON]"
+                      dataType="nText"
+                      name="_JSON" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[records].ExternalColumns[_RowIndex]"
+                      dataType="i4"
+                      name="_RowIndex" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[records].ExternalColumns[_ParentKeyField]"
+                      dataType="i4"
+                      name="_ParentKeyField" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[records].ExternalColumns[particulars]"
+                      dataType="wstr"
+                      length="255"
+                      name="particulars">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="The id of the parent output of this output."
+                          name="JPath">$['records'][n]['particulars']</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[records].ExternalColumns[_1951]"
+                      dataType="wstr"
+                      length="255"
+                      name="_1951">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="The id of the parent output of this output."
+                          name="JPath">$['records'][n]['_1951']</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[records].ExternalColumns[_1961]"
+                      dataType="wstr"
+                      length="255"
+                      name="_1961">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="The id of the parent output of this output."
+                          name="JPath">$['records'][n]['_1961']</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[records].ExternalColumns[_1971]"
+                      dataType="wstr"
+                      length="255"
+                      name="_1971">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="The id of the parent output of this output."
+                          name="JPath">$['records'][n]['_1971']</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[records].ExternalColumns[_1981]"
+                      dataType="wstr"
+                      length="255"
+                      name="_1981">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="The id of the parent output of this output."
+                          name="JPath">$['records'][n]['_1981']</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[records].ExternalColumns[_1991]"
+                      dataType="wstr"
+                      length="255"
+                      name="_1991">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="The id of the parent output of this output."
+                          name="JPath">$['records'][n]['_1991']</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[records].ExternalColumns[_2001]"
+                      dataType="wstr"
+                      length="255"
+                      name="_2001">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="The id of the parent output of this output."
+                          name="JPath">$['records'][n]['_2001']</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\JSON Source.Outputs[records].ExternalColumns[_2011]"
+                      dataType="wstr"
+                      length="255"
+                      name="_2011">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="The id of the parent output of this output."
+                          name="JPath">$['records'][n]['_2011']</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[DataGov]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[CIPL-0023\MSSQLDEVLOPER.Sample]"
+                  connectionManagerRefId="Package.ConnectionManagers[CIPL-0023\MSSQLDEVLOPER.Sample]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[particulars]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="particulars"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[particulars]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[records].Columns[particulars]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[_1951]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="_1951"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[_1951]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[records].Columns[_1951]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[_1961]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="_1961"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[_1961]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[records].Columns[_1961]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[_1971]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="_1971"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[_1971]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[records].Columns[_1971]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[_1981]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="_1981"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[_1981]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[records].Columns[_1981]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[_1991]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="_1991"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[_1991]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[records].Columns[_1991]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[_2001]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="_2001"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[_2001]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[records].Columns[_2001]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[_2011]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="_2011"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[_2011]"
+                      lineageId="Package\Data Flow Task\JSON Source.Outputs[records].Columns[_2011]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[particulars]"
+                      dataType="wstr"
+                      length="255"
+                      name="particulars" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[_1951]"
+                      dataType="wstr"
+                      length="255"
+                      name="_1951" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[_1961]"
+                      dataType="wstr"
+                      length="255"
+                      name="_1961" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[_1971]"
+                      dataType="wstr"
+                      length="255"
+                      name="_1971" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[_1981]"
+                      dataType="wstr"
+                      length="255"
+                      name="_1981" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[_1991]"
+                      dataType="wstr"
+                      length="255"
+                      name="_1991" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[_2001]"
+                      dataType="wstr"
+                      length="255"
+                      name="_2001" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[_2011]"
+                      dataType="wstr"
+                      length="255"
+                      name="_2011" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[records]"
+              endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="records"
+              startId="Package\Data Flow Task\JSON Source.Outputs[records]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="152,42.6666666666667"
+          Id="Package\Data Flow Task"
+          TopLeft="72.9999994412065,35.0185185271281" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="172,42.6666666666667"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="114.583334258447,172.233333496054" />
+        <NodeLayout
+          Size="140,42.6666666666667"
+          Id="Package\Data Flow Task\JSON Source"
+          TopLeft="122.750000962366,40.6333334650596" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[records]"
+          TopLeft="196.666667610407,83.3000001317263">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,88.9333333643274"
+              Start="0,0"
+              End="0,81.4333333643274">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,81.4333333643274" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-16.81919921875,35.8421549634137,33.6383984375,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

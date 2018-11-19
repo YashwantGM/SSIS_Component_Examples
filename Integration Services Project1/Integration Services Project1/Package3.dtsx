@@ -1,0 +1,2935 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/16/2018 3:57:30 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="CIPL-0023"
+  DTS:CreatorName="CIPL-0023\Developer"
+  DTS:DTSID="{18E78599-D991-418F-B3DA-12F605BC8136}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.0900.30"
+  DTS:LocaleID="16393"
+  DTS:ObjectName="Package3"
+  DTS:PackageType="5"
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{E3771192-D1A1-447A-993C-D1AC705AB48E}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{F3CFEFDF-7F96-461D-9B71-4D394BBFA619}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="16393"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\MyLearning\New folder\Json.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 0"
+              DTS:DTSID="{D4371A9C-E452-4798-B56C-A549FE3826D7}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{ECD7BE94-57D4-44F1-8EC0-A1D3465D575A}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="16393"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\MyLearning\New folder\Json.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="audio.album"
+              DTS:DTSID="{89008F19-5317-4CBF-8777-43D448265C54}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="audio.albumArtist"
+              DTS:DTSID="{C534B4B7-AF81-459D-914B-28CE713B526F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="audio.artist"
+              DTS:DTSID="{6C5AA648-6E1A-42A0-B53E-4950EDA5F9C7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="audio.bitrate"
+              DTS:DTSID="{2543F67C-833D-4911-89F6-2CA794F2A436}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="audio.composers"
+              DTS:DTSID="{1B2C2582-1A0D-4149-8A5E-448EE62B271C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="audio.copyright"
+              DTS:DTSID="{78EF75A1-A140-4D4D-BD1C-7DE68B97DCDB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="audio.disc"
+              DTS:DTSID="{2A797134-ACC6-4EF5-84E8-375605191BBF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="audio.discCount"
+              DTS:DTSID="{BF50E80D-16AF-4345-9F9C-E9CE31992444}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="audio.duration"
+              DTS:DTSID="{E1731CE8-87FB-4768-BD5E-BE02C72F1314}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="audio.genre"
+              DTS:DTSID="{30D711C0-EE2F-4D99-8915-1BF5B71C5224}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="audio.hasDrm"
+              DTS:DTSID="{AB851EA9-275D-4E12-B68F-26BCF1F16A31}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="audio.isVariableBitrate"
+              DTS:DTSID="{7C6F43E1-F556-435C-8BD9-09991DAB0735}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="audio.title"
+              DTS:DTSID="{0ECAF628-71D1-4F58-A212-B891CE90F325}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="audio.track"
+              DTS:DTSID="{CEE82558-F1B8-4738-89B4-3F81B19C76EF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="audio.trackCount"
+              DTS:DTSID="{CE709112-9132-43DF-B62E-EBB5B33DB448}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="audio.year"
+              DTS:DTSID="{AD5346CD-3AC9-4BD6-B40D-B14F6C267129}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="createdBy.application.displayName"
+              DTS:DTSID="{E725EBB7-C8F3-4C30-ACA8-246CB2CD2E1F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="createdBy.application.id"
+              DTS:DTSID="{A71E21B7-FCC2-449E-8EC7-2CBDE0700573}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="createdBy.device.displayName"
+              DTS:DTSID="{4568CB15-01ED-420F-AB51-0701445C218D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="createdBy.device.id"
+              DTS:DTSID="{0D2DA4B1-5DE1-4394-ACEF-C7F868C2162D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="createdBy.user.displayName"
+              DTS:DTSID="{92076E5F-489F-42CA-BDAF-6F5261960B29}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="createdBy.user.id"
+              DTS:DTSID="{4326B8D3-5798-4579-9B2A-F315F39BDEB2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="createdDateTime"
+              DTS:DTSID="{D990A400-85A6-41E3-AB76-A992D614E2FD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cTag"
+              DTS:DTSID="{8A460397-5F19-4BAB-BDEB-421E64549F2F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="driveId"
+              DTS:DTSID="{5628AA4F-8140-409B-AFAC-A7674DAE211D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="eTag"
+              DTS:DTSID="{E4359B6F-B723-423E-849A-FD2CE73D053F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="file.hashes.crc32Hash"
+              DTS:DTSID="{922C163A-8009-454C-BC91-D11D3409827C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="file.hashes.sha1Hash"
+              DTS:DTSID="{FD75EFCA-B563-46A1-A2CB-E8BDC2B1340C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="file.mimeType"
+              DTS:DTSID="{2EA782DE-3FD8-480C-B843-30BFB26FB13D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="301"
+              DTS:TextQualified="True"
+              DTS:ObjectName="file_content"
+              DTS:DTSID="{BBF94DB6-FBEC-476C-8E52-BB589E074839}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fileSystemInfo.createdDateTime"
+              DTS:DTSID="{1FBFB17C-2D95-4620-82E6-33FE58084F4D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fileSystemInfo.lastModifiedDateTime"
+              DTS:DTSID="{8A566E71-F3D6-4466-9080-699BD01787E4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="folder.childCount"
+              DTS:DTSID="{7F1928CF-D2A6-4832-8145-FF8BA19ED622}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id"
+              DTS:DTSID="{EEAD8EF0-9627-4FA2-9B6A-4060A1C0AF9B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="image.height"
+              DTS:DTSID="{D1C54B62-9F01-4EA4-838A-1B2408DBFCC5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="image.width"
+              DTS:DTSID="{ACD4DDBD-B537-4E4A-A6A7-FB1854F80CD1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="isFolder"
+              DTS:DTSID="{61A9BC6B-4743-46C7-BD1B-E9409510722B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="lastModifiedBy.application.displayName"
+              DTS:DTSID="{4F2EC39D-F356-4638-A0E3-2FB809FF39FF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="lastModifiedBy.application.id"
+              DTS:DTSID="{7398B36E-59A9-49DF-A311-5E950D602DE9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="lastModifiedBy.device.displayName"
+              DTS:DTSID="{9CB572F3-DF3C-4DDE-AF13-A09ADF05DE85}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="lastModifiedBy.device.id"
+              DTS:DTSID="{23A46A69-493F-45F2-9F43-C623DC5DCFFF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="lastModifiedBy.user.displayName"
+              DTS:DTSID="{CE28F6AE-6BC3-4FD6-A652-65DD14554C97}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="lastModifiedBy.user.id"
+              DTS:DTSID="{3D4C94EA-527D-4865-B730-DA232BAA8F70}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="lastModifiedDateTime"
+              DTS:DTSID="{3F667456-3A3C-44C4-9D23-6869EB33F30D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="14"
+              DTS:TextQualified="True"
+              DTS:ObjectName="location.altitude"
+              DTS:DTSID="{4109BF1B-623A-4E1E-8604-8B89EB0CF915}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="14"
+              DTS:TextQualified="True"
+              DTS:ObjectName="location.latitude"
+              DTS:DTSID="{B1E51EBF-E56B-4044-8CFE-2480C038509A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="14"
+              DTS:TextQualified="True"
+              DTS:ObjectName="location.longitude"
+              DTS:DTSID="{7D6A253B-F751-4961-BB47-393338DC15F3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="name"
+              DTS:DTSID="{6BAC8A08-F451-4105-A227-1E760E21187B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="parentReference.driveId"
+              DTS:DTSID="{A0456AF1-342C-4275-BAF3-998DC496C59D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="parentReference.id"
+              DTS:DTSID="{7FC6DFEB-78BB-4792-AF15-991B01857BE6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="parentReference.path"
+              DTS:DTSID="{88765727-7835-4F10-8B08-9F23062CCC7E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="photo.cameraMake"
+              DTS:DTSID="{B7727965-1D49-4AAC-AE7B-E1671D54698B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="photo.cameraModel"
+              DTS:DTSID="{701E509D-83BB-4010-8644-35037DCCDFA0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="14"
+              DTS:TextQualified="True"
+              DTS:ObjectName="photo.exposureDenominator"
+              DTS:DTSID="{649A1521-FDF3-4964-B582-25885BBB02FD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="14"
+              DTS:TextQualified="True"
+              DTS:ObjectName="photo.exposureNumeratory"
+              DTS:DTSID="{7369C4D4-B839-4A6E-B64A-B269359CA4E8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="14"
+              DTS:TextQualified="True"
+              DTS:ObjectName="photo.fNumber"
+              DTS:DTSID="{A431E01E-ED17-40C3-B14F-2C686975C17E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="14"
+              DTS:TextQualified="True"
+              DTS:ObjectName="photo.focalLength"
+              DTS:DTSID="{E0E4420B-A8D2-4899-B8D7-CDB3A475A640}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="photo.iso"
+              DTS:DTSID="{AE25DEC1-97C7-4222-B58B-8A228C44D917}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="photo.takenDateTime"
+              DTS:DTSID="{7382587E-6EC8-4729-A65A-AB113136F04F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.createdBy.application.displayName"
+              DTS:DTSID="{5FCFD839-4F89-4B4F-BF55-8AB36B11802C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.createdBy.application.id"
+              DTS:DTSID="{7C52034E-FC98-48E6-8BC2-D65E6410D998}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.createdBy.device.displayName"
+              DTS:DTSID="{C39A85A2-3CC8-4C52-A6CD-358C0BC1C64C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.createdBy.device.id"
+              DTS:DTSID="{5BE3979B-EECC-4C1E-B024-41735E0C0AFE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.createdBy.user.displayName"
+              DTS:DTSID="{FB3F2B4C-A629-4AA4-B0E3-04A419FCA217}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.createdBy.user.id"
+              DTS:DTSID="{866C27F6-E2B9-4B00-A560-A5999EC379C7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.createdDateTime"
+              DTS:DTSID="{F11F5BFB-EB35-46F3-8663-3D63ADC9F8E3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.file.hashes.crc32Hash"
+              DTS:DTSID="{E53712E5-12E5-4137-9FF8-706356BD97F7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.file.hashes.sha1Hash"
+              DTS:DTSID="{1C52341F-2040-4E23-8EDA-2E22400BD42E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.file.mimeType"
+              DTS:DTSID="{AC643B57-FD2F-47FD-BFB8-F3D70D9EF246}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.fileSystemInfo.createdDateTime"
+              DTS:DTSID="{A6D4F9B1-94FF-4E94-827B-D3C2D83AED8E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.fileSystemInfo.lastModifiedDateTime"
+              DTS:DTSID="{2789199E-DA07-4781-A235-00298E01656A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.folder.childCount"
+              DTS:DTSID="{8BD891A8-13C8-431E-9D4F-4D95D2358558}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.id"
+              DTS:DTSID="{4853AE54-5B58-4607-82F7-534C860D1D92}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.lastModifiedBy.application.displayName"
+              DTS:DTSID="{884FFBF7-D9FC-40F7-91ED-149D8A72C86F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.lastModifiedBy.application.id"
+              DTS:DTSID="{2DCAEA15-645D-4AD8-B914-2B0158083115}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.lastModifiedBy.device.displayName"
+              DTS:DTSID="{732BA9B3-0D5A-4EB0-8D55-9E64FEC7656D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.lastModifiedBy.device.id"
+              DTS:DTSID="{07EF4D6E-D2E0-416D-9D9E-570CD4748346}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.lastModifiedBy.user.displayName"
+              DTS:DTSID="{873CA601-4484-4E3C-9822-27750CA50575}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.lastModifiedBy.user.id"
+              DTS:DTSID="{FCF29F95-9499-41DB-AE66-E55A62BC7AB5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.lastModifiedDateTime"
+              DTS:DTSID="{869BA1BB-D893-4B7C-935A-C87E3C1944C3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.name"
+              DTS:DTSID="{98965BF9-631F-4739-832C-E96CAACD4057}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.parentReference.driveId"
+              DTS:DTSID="{0465F54D-C40A-4A02-8B74-6040C083C36B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.parentReference.id"
+              DTS:DTSID="{F78F86D2-937E-4DF8-9FC3-556DAFBE4077}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.parentReference.path"
+              DTS:DTSID="{1197A5F8-C471-4BA0-96E4-3536EC59CCA2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.shared.scope"
+              DTS:DTSID="{4EFFCCE5-C581-4DA3-9E95-E1ED6016D67E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.shared.sharedBy.application.displayName"
+              DTS:DTSID="{7255B9AF-5678-4309-BADF-2A61542912E6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.shared.sharedBy.application.id"
+              DTS:DTSID="{0941EE11-1D38-4BF5-AD4C-818C6EF041FE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.shared.sharedBy.device.displayName"
+              DTS:DTSID="{775364B1-ED5B-4D0D-9802-79C32F6BDB0A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.shared.sharedBy.device.id"
+              DTS:DTSID="{61A7C617-A2EA-4DDE-AE5C-0530396255D1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.shared.sharedBy.user.displayName"
+              DTS:DTSID="{8B41F92F-1BD3-4EAF-A6C7-3801C9AC12EF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.shared.sharedBy.user.id"
+              DTS:DTSID="{68FFB827-DBCB-4CD4-B326-C4D094738EC9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.shared.sharedDateTime"
+              DTS:DTSID="{477D4324-EDFF-4CAA-9E0B-BF48C304C053}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="72"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.sharepointIds.listId"
+              DTS:DTSID="{F6E1AE67-BA27-43A5-A207-00CD48CB0C7E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.sharepointIds.listItemId"
+              DTS:DTSID="{C6156667-01A4-4116-94D9-9C0D4C373DD0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="72"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.sharepointIds.listItemUniqueId"
+              DTS:DTSID="{2DFF4724-2E3D-4A14-8CED-AB51B3AAC601}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="72"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.sharepointIds.siteId"
+              DTS:DTSID="{39E38EA3-E706-4610-9B02-E9AFD3FA1C5A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.sharepointIds.siteUrl"
+              DTS:DTSID="{D663AC65-7BA8-4F5F-8AFE-888C944767CE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.sharepointIds.syncResourceId"
+              DTS:DTSID="{69C6A08D-F33D-4218-8042-F1C5300D1238}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.sharepointIds.tenantDisplayName"
+              DTS:DTSID="{F4D4D826-53F8-4ADA-B648-2BC04FFF6D6A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="72"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.sharepointIds.tenantId"
+              DTS:DTSID="{DE6ED144-5165-4C8E-BCFB-CF2F77D4EB36}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="72"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.sharepointIds.webId"
+              DTS:DTSID="{028AAC06-2EF8-4CE3-A871-D03D61196FB4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.size"
+              DTS:DTSID="{07D08D7D-3D05-4685-A561-6204CD73665C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.Type"
+              DTS:DTSID="{EC69D1A8-759B-4999-98DB-17A2235B9BB8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.webDavUrl"
+              DTS:DTSID="{3FB7B60C-9FA1-42F7-9FE2-C6C7A2BE222D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="remoteItem.webUrl"
+              DTS:DTSID="{59A87D33-B368-461B-87C9-E64C3F79ED09}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="size"
+              DTS:DTSID="{9E1A4B6D-8295-4015-B1F8-B843DA48D8E9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="video.bitrate"
+              DTS:DTSID="{1FB5B81A-D81A-4FF8-8126-AAB22E283F27}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="video.duration"
+              DTS:DTSID="{FA572786-D4DD-4434-B6D7-B299E5A8FBD8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="video.height"
+              DTS:DTSID="{191E95A1-E352-4A73-ACA9-B939C3CCE12B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="video.width"
+              DTS:DTSID="{8DDA63A1-613B-4B91-8401-82FB163F33E5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="webUrl"
+              DTS:DTSID="{B0098104-00AF-4640-BB0D-A7900B2957BC}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[OneDrive Connection Manager]"
+      DTS:CreationName="OneDrive (KingswaySoft)"
+      DTS:DTSID="{E043BD68-47A5-4FAA-95C4-7DAADB33DDC9}"
+      DTS:ObjectName="OneDrive Connection Manager">
+      <DTS:ObjectData>
+        <ConnectionManager
+          ConnectionString="AccountId=fed06e3a768c0b7d;TokenLocation=LocalMachine;AccountType=Personal;UploadChunkSize=&quot;4 MB&quot;;ProxyMode=NoProxy;ProxyUsername=;ProxyServer=;ProxyServerPort=0;ServiceTimeout=120;ApiThrottleRate=10;RetryOnIntermittentErrors=True" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[OneDrive Connection Manager 1]"
+      DTS:CreationName="OneDrive (KingswaySoft)"
+      DTS:DTSID="{25CD163A-8082-4506-BA8C-D518CC456392}"
+      DTS:ObjectName="OneDrive Connection Manager 1">
+      <DTS:ObjectData>
+        <ConnectionManager
+          ConnectionString="AccountId=fed06e3a768c0b7d;TokenLocation=LocalMachine;AccountType=Personal;UploadChunkSize=&quot;4 MB&quot;;ProxyMode=NoProxy;ProxyUsername=;ProxyServer=;ProxyServerPort=0;ServiceTimeout=120;ApiThrottleRate=10;RetryOnIntermittentErrors=True" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[OneDrive Connection Manager 2]"
+      DTS:CreationName="OneDrive (KingswaySoft)"
+      DTS:DTSID="{2E7C48C7-1C1D-43D2-91FA-AC5BC6CC4E34}"
+      DTS:ObjectName="OneDrive Connection Manager 2">
+      <DTS:ObjectData>
+        <ConnectionManager
+          ConnectionString="AccountId=fed06e3a768c0b7d;TokenLocation=LocalMachine;AccountType=Personal;UploadChunkSize=&quot;4 MB&quot;;ProxyMode=NoProxy;ProxyUsername=;ProxyServer=;ProxyServerPort=0;ServiceTimeout=120;ApiThrottleRate=10;RetryOnIntermittentErrors=True" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{FADB9432-4C06-473B-84C1-F5A7F6AC2A92}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\OneDrive Source"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="KingswaySoft Inc.; http://www.kingswaysoft.com; support@kingswaysoft.com; Copyright (c) 2011-2018 KingswaySoft Inc."
+              description="Extract data from Microsoft OneDrive."
+              name="OneDrive Source"
+              usesDispositions="true">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the path to the OneDrive item to be downloaded"
+                  expressionType="Notify"
+                  name="SourceItemPath">/SSISExample/OutputEmployee.txt</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies what OneDrive Items to select and download base on the Item Path"
+                  expressionType="Notify"
+                  name="SelectionMode"
+                  typeConverter="KingswaySoft.IntegrationToolkit.OneDrive.SelectionMode">1</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">KingswaySoft.IntegrationToolkit.OneDrive.OneDriveSourceComponent</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\OneDrive Source.Connections[OneDrive (KingswaySoft)]"
+                  connectionManagerID="Package.ConnectionManagers[OneDrive Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[OneDrive Connection Manager]"
+                  description="OneDrive"
+                  name="OneDrive (KingswaySoft)" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output]"
+                  name="Primary Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[audio.album]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[audio.album]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[audio.album]"
+                      name="audio.album"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[audio.albumArtist]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[audio.albumArtist]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[audio.albumArtist]"
+                      name="audio.albumArtist"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[audio.artist]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[audio.artist]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[audio.artist]"
+                      name="audio.artist"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[audio.bitrate]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[audio.bitrate]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[audio.bitrate]"
+                      name="audio.bitrate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[audio.composers]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[audio.composers]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[audio.composers]"
+                      name="audio.composers"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[audio.copyright]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[audio.copyright]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[audio.copyright]"
+                      name="audio.copyright"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[audio.disc]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[audio.disc]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[audio.disc]"
+                      name="audio.disc"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[audio.discCount]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[audio.discCount]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[audio.discCount]"
+                      name="audio.discCount"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[audio.duration]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[audio.duration]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[audio.duration]"
+                      name="audio.duration"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[audio.genre]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[audio.genre]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[audio.genre]"
+                      name="audio.genre"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[audio.hasDrm]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[audio.hasDrm]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[audio.hasDrm]"
+                      name="audio.hasDrm"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[audio.isVariableBitrate]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[audio.isVariableBitrate]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[audio.isVariableBitrate]"
+                      name="audio.isVariableBitrate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[audio.title]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[audio.title]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[audio.title]"
+                      name="audio.title"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[audio.track]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[audio.track]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[audio.track]"
+                      name="audio.track"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[audio.trackCount]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[audio.trackCount]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[audio.trackCount]"
+                      name="audio.trackCount"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[audio.year]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[audio.year]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[audio.year]"
+                      name="audio.year"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[createdBy.application.displayName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[createdBy.application.displayName]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[createdBy.application.displayName]"
+                      name="createdBy.application.displayName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[createdBy.application.id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[createdBy.application.id]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[createdBy.application.id]"
+                      name="createdBy.application.id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[createdBy.device.displayName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[createdBy.device.displayName]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[createdBy.device.displayName]"
+                      name="createdBy.device.displayName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[createdBy.device.id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[createdBy.device.id]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[createdBy.device.id]"
+                      name="createdBy.device.id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[createdBy.user.displayName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[createdBy.user.displayName]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[createdBy.user.displayName]"
+                      name="createdBy.user.displayName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[createdBy.user.id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[createdBy.user.id]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[createdBy.user.id]"
+                      name="createdBy.user.id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[createdDateTime]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[createdDateTime]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[createdDateTime]"
+                      name="createdDateTime"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[cTag]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[cTag]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[cTag]"
+                      name="cTag"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[driveId]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[driveId]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[driveId]"
+                      name="driveId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[eTag]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[eTag]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[eTag]"
+                      name="eTag"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[file.hashes.crc32Hash]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[file.hashes.crc32Hash]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[file.hashes.crc32Hash]"
+                      name="file.hashes.crc32Hash"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[file.hashes.sha1Hash]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[file.hashes.sha1Hash]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[file.hashes.sha1Hash]"
+                      name="file.hashes.sha1Hash"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[file.mimeType]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[file.mimeType]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[file.mimeType]"
+                      name="file.mimeType"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[file_content]"
+                      dataType="image"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[file_content]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[file_content]"
+                      name="file_content"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[fileSystemInfo.createdDateTime]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[fileSystemInfo.createdDateTime]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[fileSystemInfo.createdDateTime]"
+                      name="fileSystemInfo.createdDateTime"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[fileSystemInfo.lastModifiedDateTime]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[fileSystemInfo.lastModifiedDateTime]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[fileSystemInfo.lastModifiedDateTime]"
+                      name="fileSystemInfo.lastModifiedDateTime"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[folder.childCount]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[folder.childCount]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[folder.childCount]"
+                      name="folder.childCount"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[id]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[image.height]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[image.height]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[image.height]"
+                      name="image.height"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[image.width]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[image.width]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[image.width]"
+                      name="image.width"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[isFolder]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[isFolder]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[isFolder]"
+                      name="isFolder"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[lastModifiedBy.application.displayName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[lastModifiedBy.application.displayName]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[lastModifiedBy.application.displayName]"
+                      name="lastModifiedBy.application.displayName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[lastModifiedBy.application.id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[lastModifiedBy.application.id]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[lastModifiedBy.application.id]"
+                      name="lastModifiedBy.application.id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[lastModifiedBy.device.displayName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[lastModifiedBy.device.displayName]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[lastModifiedBy.device.displayName]"
+                      name="lastModifiedBy.device.displayName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[lastModifiedBy.device.id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[lastModifiedBy.device.id]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[lastModifiedBy.device.id]"
+                      name="lastModifiedBy.device.id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[lastModifiedBy.user.displayName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[lastModifiedBy.user.displayName]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[lastModifiedBy.user.displayName]"
+                      name="lastModifiedBy.user.displayName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[lastModifiedBy.user.id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[lastModifiedBy.user.id]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[lastModifiedBy.user.id]"
+                      name="lastModifiedBy.user.id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[lastModifiedDateTime]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[lastModifiedDateTime]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[lastModifiedDateTime]"
+                      name="lastModifiedDateTime"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[location.altitude]"
+                      dataType="decimal"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[location.altitude]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[location.altitude]"
+                      name="location.altitude"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[location.latitude]"
+                      dataType="decimal"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[location.latitude]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[location.latitude]"
+                      name="location.latitude"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[location.longitude]"
+                      dataType="decimal"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[location.longitude]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[location.longitude]"
+                      name="location.longitude"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[name]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[name]"
+                      name="name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[parentReference.driveId]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[parentReference.driveId]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[parentReference.driveId]"
+                      name="parentReference.driveId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[parentReference.id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[parentReference.id]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[parentReference.id]"
+                      name="parentReference.id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[parentReference.path]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[parentReference.path]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[parentReference.path]"
+                      name="parentReference.path"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[photo.cameraMake]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[photo.cameraMake]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[photo.cameraMake]"
+                      name="photo.cameraMake"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[photo.cameraModel]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[photo.cameraModel]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[photo.cameraModel]"
+                      name="photo.cameraModel"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[photo.exposureDenominator]"
+                      dataType="decimal"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[photo.exposureDenominator]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[photo.exposureDenominator]"
+                      name="photo.exposureDenominator"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[photo.exposureNumeratory]"
+                      dataType="decimal"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[photo.exposureNumeratory]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[photo.exposureNumeratory]"
+                      name="photo.exposureNumeratory"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[photo.fNumber]"
+                      dataType="decimal"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[photo.fNumber]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[photo.fNumber]"
+                      name="photo.fNumber"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[photo.focalLength]"
+                      dataType="decimal"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[photo.focalLength]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[photo.focalLength]"
+                      name="photo.focalLength"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[photo.iso]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[photo.iso]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[photo.iso]"
+                      name="photo.iso"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[photo.takenDateTime]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[photo.takenDateTime]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[photo.takenDateTime]"
+                      name="photo.takenDateTime"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.createdBy.application.displayName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.createdBy.application.displayName]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.createdBy.application.displayName]"
+                      name="remoteItem.createdBy.application.displayName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.createdBy.application.id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.createdBy.application.id]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.createdBy.application.id]"
+                      name="remoteItem.createdBy.application.id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.createdBy.device.displayName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.createdBy.device.displayName]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.createdBy.device.displayName]"
+                      name="remoteItem.createdBy.device.displayName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.createdBy.device.id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.createdBy.device.id]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.createdBy.device.id]"
+                      name="remoteItem.createdBy.device.id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.createdBy.user.displayName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.createdBy.user.displayName]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.createdBy.user.displayName]"
+                      name="remoteItem.createdBy.user.displayName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.createdBy.user.id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.createdBy.user.id]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.createdBy.user.id]"
+                      name="remoteItem.createdBy.user.id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.createdDateTime]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.createdDateTime]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.createdDateTime]"
+                      name="remoteItem.createdDateTime"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.file.hashes.crc32Hash]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.file.hashes.crc32Hash]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.file.hashes.crc32Hash]"
+                      name="remoteItem.file.hashes.crc32Hash"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.file.hashes.sha1Hash]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.file.hashes.sha1Hash]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.file.hashes.sha1Hash]"
+                      name="remoteItem.file.hashes.sha1Hash"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.file.mimeType]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.file.mimeType]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.file.mimeType]"
+                      name="remoteItem.file.mimeType"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.fileSystemInfo.createdDateTime]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.fileSystemInfo.createdDateTime]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.fileSystemInfo.createdDateTime]"
+                      name="remoteItem.fileSystemInfo.createdDateTime"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.fileSystemInfo.lastModifiedDateTime]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.fileSystemInfo.lastModifiedDateTime]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.fileSystemInfo.lastModifiedDateTime]"
+                      name="remoteItem.fileSystemInfo.lastModifiedDateTime"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.folder.childCount]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.folder.childCount]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.folder.childCount]"
+                      name="remoteItem.folder.childCount"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.id]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.id]"
+                      name="remoteItem.id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.lastModifiedBy.application.displayName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.lastModifiedBy.application.displayName]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.lastModifiedBy.application.displayName]"
+                      name="remoteItem.lastModifiedBy.application.displayName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.lastModifiedBy.application.id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.lastModifiedBy.application.id]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.lastModifiedBy.application.id]"
+                      name="remoteItem.lastModifiedBy.application.id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.lastModifiedBy.device.displayName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.lastModifiedBy.device.displayName]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.lastModifiedBy.device.displayName]"
+                      name="remoteItem.lastModifiedBy.device.displayName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.lastModifiedBy.device.id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.lastModifiedBy.device.id]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.lastModifiedBy.device.id]"
+                      name="remoteItem.lastModifiedBy.device.id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.lastModifiedBy.user.displayName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.lastModifiedBy.user.displayName]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.lastModifiedBy.user.displayName]"
+                      name="remoteItem.lastModifiedBy.user.displayName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.lastModifiedBy.user.id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.lastModifiedBy.user.id]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.lastModifiedBy.user.id]"
+                      name="remoteItem.lastModifiedBy.user.id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.lastModifiedDateTime]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.lastModifiedDateTime]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.lastModifiedDateTime]"
+                      name="remoteItem.lastModifiedDateTime"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.name]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.name]"
+                      name="remoteItem.name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.parentReference.driveId]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.parentReference.driveId]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.parentReference.driveId]"
+                      name="remoteItem.parentReference.driveId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.parentReference.id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.parentReference.id]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.parentReference.id]"
+                      name="remoteItem.parentReference.id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.parentReference.path]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.parentReference.path]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.parentReference.path]"
+                      name="remoteItem.parentReference.path"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.shared.scope]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.shared.scope]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.shared.scope]"
+                      name="remoteItem.shared.scope"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.shared.sharedBy.application.displayName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.shared.sharedBy.application.displayName]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.shared.sharedBy.application.displayName]"
+                      name="remoteItem.shared.sharedBy.application.displayName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.shared.sharedBy.application.id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.shared.sharedBy.application.id]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.shared.sharedBy.application.id]"
+                      name="remoteItem.shared.sharedBy.application.id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.shared.sharedBy.device.displayName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.shared.sharedBy.device.displayName]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.shared.sharedBy.device.displayName]"
+                      name="remoteItem.shared.sharedBy.device.displayName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.shared.sharedBy.device.id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.shared.sharedBy.device.id]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.shared.sharedBy.device.id]"
+                      name="remoteItem.shared.sharedBy.device.id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.shared.sharedBy.user.displayName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.shared.sharedBy.user.displayName]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.shared.sharedBy.user.displayName]"
+                      name="remoteItem.shared.sharedBy.user.displayName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.shared.sharedBy.user.id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.shared.sharedBy.user.id]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.shared.sharedBy.user.id]"
+                      name="remoteItem.shared.sharedBy.user.id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.shared.sharedDateTime]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.shared.sharedDateTime]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.shared.sharedDateTime]"
+                      name="remoteItem.shared.sharedDateTime"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.sharepointIds.listId]"
+                      dataType="guid"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.sharepointIds.listId]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.sharepointIds.listId]"
+                      name="remoteItem.sharepointIds.listId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.sharepointIds.listItemId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.sharepointIds.listItemId]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.sharepointIds.listItemId]"
+                      name="remoteItem.sharepointIds.listItemId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.sharepointIds.listItemUniqueId]"
+                      dataType="guid"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.sharepointIds.listItemUniqueId]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.sharepointIds.listItemUniqueId]"
+                      name="remoteItem.sharepointIds.listItemUniqueId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.sharepointIds.siteId]"
+                      dataType="guid"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.sharepointIds.siteId]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.sharepointIds.siteId]"
+                      name="remoteItem.sharepointIds.siteId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.sharepointIds.siteUrl]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.sharepointIds.siteUrl]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.sharepointIds.siteUrl]"
+                      name="remoteItem.sharepointIds.siteUrl"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.sharepointIds.syncResourceId]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.sharepointIds.syncResourceId]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.sharepointIds.syncResourceId]"
+                      name="remoteItem.sharepointIds.syncResourceId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.sharepointIds.tenantDisplayName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.sharepointIds.tenantDisplayName]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.sharepointIds.tenantDisplayName]"
+                      name="remoteItem.sharepointIds.tenantDisplayName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.sharepointIds.tenantId]"
+                      dataType="guid"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.sharepointIds.tenantId]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.sharepointIds.tenantId]"
+                      name="remoteItem.sharepointIds.tenantId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.sharepointIds.webId]"
+                      dataType="guid"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.sharepointIds.webId]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.sharepointIds.webId]"
+                      name="remoteItem.sharepointIds.webId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.size]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.size]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.size]"
+                      name="remoteItem.size"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.Type]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.Type]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.Type]"
+                      name="remoteItem.Type"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.webDavUrl]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.webDavUrl]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.webDavUrl]"
+                      name="remoteItem.webDavUrl"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.webUrl]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.webUrl]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.webUrl]"
+                      name="remoteItem.webUrl"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[size]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[size]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[size]"
+                      name="size"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[video.bitrate]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[video.bitrate]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[video.bitrate]"
+                      name="video.bitrate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[video.duration]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[video.duration]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[video.duration]"
+                      name="video.duration"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[video.height]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[video.height]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[video.height]"
+                      name="video.height"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[video.width]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[video.width]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[video.width]"
+                      name="video.width"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[webUrl]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[webUrl]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[webUrl]"
+                      name="webUrl"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[audio.album]"
+                      dataType="wstr"
+                      length="4000"
+                      name="audio.album" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[audio.albumArtist]"
+                      dataType="wstr"
+                      length="4000"
+                      name="audio.albumArtist" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[audio.artist]"
+                      dataType="wstr"
+                      length="4000"
+                      name="audio.artist" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[audio.bitrate]"
+                      dataType="i4"
+                      name="audio.bitrate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[audio.composers]"
+                      dataType="wstr"
+                      length="4000"
+                      name="audio.composers" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[audio.copyright]"
+                      dataType="wstr"
+                      length="4000"
+                      name="audio.copyright" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[audio.disc]"
+                      dataType="i4"
+                      name="audio.disc" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[audio.discCount]"
+                      dataType="i4"
+                      name="audio.discCount" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[audio.duration]"
+                      dataType="i4"
+                      name="audio.duration" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[audio.genre]"
+                      dataType="wstr"
+                      length="4000"
+                      name="audio.genre" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[audio.hasDrm]"
+                      dataType="bool"
+                      name="audio.hasDrm" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[audio.isVariableBitrate]"
+                      dataType="bool"
+                      name="audio.isVariableBitrate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[audio.title]"
+                      dataType="wstr"
+                      length="4000"
+                      name="audio.title" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[audio.track]"
+                      dataType="i4"
+                      name="audio.track" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[audio.trackCount]"
+                      dataType="i4"
+                      name="audio.trackCount" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[audio.year]"
+                      dataType="i4"
+                      name="audio.year" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[createdBy.application.displayName]"
+                      dataType="wstr"
+                      length="4000"
+                      name="createdBy.application.displayName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[createdBy.application.id]"
+                      dataType="wstr"
+                      length="4000"
+                      name="createdBy.application.id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[createdBy.device.displayName]"
+                      dataType="wstr"
+                      length="4000"
+                      name="createdBy.device.displayName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[createdBy.device.id]"
+                      dataType="wstr"
+                      length="4000"
+                      name="createdBy.device.id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[createdBy.user.displayName]"
+                      dataType="wstr"
+                      length="4000"
+                      name="createdBy.user.displayName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[createdBy.user.id]"
+                      dataType="wstr"
+                      length="4000"
+                      name="createdBy.user.id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[createdDateTime]"
+                      dataType="dbTimeStamp"
+                      name="createdDateTime" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[cTag]"
+                      dataType="wstr"
+                      length="4000"
+                      name="cTag" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[driveId]"
+                      dataType="wstr"
+                      length="4000"
+                      name="driveId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[eTag]"
+                      dataType="wstr"
+                      length="4000"
+                      name="eTag" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[file.hashes.crc32Hash]"
+                      dataType="wstr"
+                      length="4000"
+                      name="file.hashes.crc32Hash" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[file.hashes.sha1Hash]"
+                      dataType="wstr"
+                      length="4000"
+                      name="file.hashes.sha1Hash" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[file.mimeType]"
+                      dataType="wstr"
+                      length="4000"
+                      name="file.mimeType" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[file_content]"
+                      dataType="image"
+                      name="file_content" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[fileSystemInfo.createdDateTime]"
+                      dataType="dbTimeStamp"
+                      name="fileSystemInfo.createdDateTime" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[fileSystemInfo.lastModifiedDateTime]"
+                      dataType="dbTimeStamp"
+                      name="fileSystemInfo.lastModifiedDateTime" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[folder.childCount]"
+                      dataType="i8"
+                      name="folder.childCount" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[id]"
+                      dataType="wstr"
+                      length="4000"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[image.height]"
+                      dataType="i4"
+                      name="image.height" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[image.width]"
+                      dataType="i4"
+                      name="image.width" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[isFolder]"
+                      dataType="bool"
+                      name="isFolder" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[lastModifiedBy.application.displayName]"
+                      dataType="wstr"
+                      length="4000"
+                      name="lastModifiedBy.application.displayName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[lastModifiedBy.application.id]"
+                      dataType="wstr"
+                      length="4000"
+                      name="lastModifiedBy.application.id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[lastModifiedBy.device.displayName]"
+                      dataType="wstr"
+                      length="4000"
+                      name="lastModifiedBy.device.displayName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[lastModifiedBy.device.id]"
+                      dataType="wstr"
+                      length="4000"
+                      name="lastModifiedBy.device.id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[lastModifiedBy.user.displayName]"
+                      dataType="wstr"
+                      length="4000"
+                      name="lastModifiedBy.user.displayName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[lastModifiedBy.user.id]"
+                      dataType="wstr"
+                      length="4000"
+                      name="lastModifiedBy.user.id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[lastModifiedDateTime]"
+                      dataType="dbTimeStamp"
+                      name="lastModifiedDateTime" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[location.altitude]"
+                      dataType="decimal"
+                      name="location.altitude" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[location.latitude]"
+                      dataType="decimal"
+                      name="location.latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[location.longitude]"
+                      dataType="decimal"
+                      name="location.longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[name]"
+                      dataType="wstr"
+                      length="4000"
+                      name="name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[parentReference.driveId]"
+                      dataType="wstr"
+                      length="4000"
+                      name="parentReference.driveId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[parentReference.id]"
+                      dataType="wstr"
+                      length="4000"
+                      name="parentReference.id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[parentReference.path]"
+                      dataType="wstr"
+                      length="4000"
+                      name="parentReference.path" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[photo.cameraMake]"
+                      dataType="wstr"
+                      length="4000"
+                      name="photo.cameraMake" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[photo.cameraModel]"
+                      dataType="wstr"
+                      length="4000"
+                      name="photo.cameraModel" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[photo.exposureDenominator]"
+                      dataType="decimal"
+                      name="photo.exposureDenominator" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[photo.exposureNumeratory]"
+                      dataType="decimal"
+                      name="photo.exposureNumeratory" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[photo.fNumber]"
+                      dataType="decimal"
+                      name="photo.fNumber" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[photo.focalLength]"
+                      dataType="decimal"
+                      name="photo.focalLength" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[photo.iso]"
+                      dataType="i4"
+                      name="photo.iso" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[photo.takenDateTime]"
+                      dataType="dbTimeStamp"
+                      name="photo.takenDateTime" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.createdBy.application.displayName]"
+                      dataType="wstr"
+                      length="4000"
+                      name="remoteItem.createdBy.application.displayName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.createdBy.application.id]"
+                      dataType="wstr"
+                      length="4000"
+                      name="remoteItem.createdBy.application.id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.createdBy.device.displayName]"
+                      dataType="wstr"
+                      length="4000"
+                      name="remoteItem.createdBy.device.displayName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.createdBy.device.id]"
+                      dataType="wstr"
+                      length="4000"
+                      name="remoteItem.createdBy.device.id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.createdBy.user.displayName]"
+                      dataType="wstr"
+                      length="4000"
+                      name="remoteItem.createdBy.user.displayName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.createdBy.user.id]"
+                      dataType="wstr"
+                      length="4000"
+                      name="remoteItem.createdBy.user.id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.createdDateTime]"
+                      dataType="dbTimeStamp"
+                      name="remoteItem.createdDateTime" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.file.hashes.crc32Hash]"
+                      dataType="wstr"
+                      length="4000"
+                      name="remoteItem.file.hashes.crc32Hash" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.file.hashes.sha1Hash]"
+                      dataType="wstr"
+                      length="4000"
+                      name="remoteItem.file.hashes.sha1Hash" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.file.mimeType]"
+                      dataType="wstr"
+                      length="4000"
+                      name="remoteItem.file.mimeType" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.fileSystemInfo.createdDateTime]"
+                      dataType="dbTimeStamp"
+                      name="remoteItem.fileSystemInfo.createdDateTime" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.fileSystemInfo.lastModifiedDateTime]"
+                      dataType="dbTimeStamp"
+                      name="remoteItem.fileSystemInfo.lastModifiedDateTime" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.folder.childCount]"
+                      dataType="i8"
+                      name="remoteItem.folder.childCount" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.id]"
+                      dataType="wstr"
+                      length="4000"
+                      name="remoteItem.id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.lastModifiedBy.application.displayName]"
+                      dataType="wstr"
+                      length="4000"
+                      name="remoteItem.lastModifiedBy.application.displayName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.lastModifiedBy.application.id]"
+                      dataType="wstr"
+                      length="4000"
+                      name="remoteItem.lastModifiedBy.application.id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.lastModifiedBy.device.displayName]"
+                      dataType="wstr"
+                      length="4000"
+                      name="remoteItem.lastModifiedBy.device.displayName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.lastModifiedBy.device.id]"
+                      dataType="wstr"
+                      length="4000"
+                      name="remoteItem.lastModifiedBy.device.id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.lastModifiedBy.user.displayName]"
+                      dataType="wstr"
+                      length="4000"
+                      name="remoteItem.lastModifiedBy.user.displayName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.lastModifiedBy.user.id]"
+                      dataType="wstr"
+                      length="4000"
+                      name="remoteItem.lastModifiedBy.user.id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.lastModifiedDateTime]"
+                      dataType="dbTimeStamp"
+                      name="remoteItem.lastModifiedDateTime" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.name]"
+                      dataType="wstr"
+                      length="4000"
+                      name="remoteItem.name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.parentReference.driveId]"
+                      dataType="wstr"
+                      length="4000"
+                      name="remoteItem.parentReference.driveId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.parentReference.id]"
+                      dataType="wstr"
+                      length="4000"
+                      name="remoteItem.parentReference.id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.parentReference.path]"
+                      dataType="wstr"
+                      length="4000"
+                      name="remoteItem.parentReference.path" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.shared.scope]"
+                      dataType="wstr"
+                      length="4000"
+                      name="remoteItem.shared.scope" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.shared.sharedBy.application.displayName]"
+                      dataType="wstr"
+                      length="4000"
+                      name="remoteItem.shared.sharedBy.application.displayName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.shared.sharedBy.application.id]"
+                      dataType="wstr"
+                      length="4000"
+                      name="remoteItem.shared.sharedBy.application.id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.shared.sharedBy.device.displayName]"
+                      dataType="wstr"
+                      length="4000"
+                      name="remoteItem.shared.sharedBy.device.displayName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.shared.sharedBy.device.id]"
+                      dataType="wstr"
+                      length="4000"
+                      name="remoteItem.shared.sharedBy.device.id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.shared.sharedBy.user.displayName]"
+                      dataType="wstr"
+                      length="4000"
+                      name="remoteItem.shared.sharedBy.user.displayName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.shared.sharedBy.user.id]"
+                      dataType="wstr"
+                      length="4000"
+                      name="remoteItem.shared.sharedBy.user.id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.shared.sharedDateTime]"
+                      dataType="dbTimeStamp"
+                      name="remoteItem.shared.sharedDateTime" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.sharepointIds.listId]"
+                      dataType="guid"
+                      name="remoteItem.sharepointIds.listId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.sharepointIds.listItemId]"
+                      dataType="i4"
+                      name="remoteItem.sharepointIds.listItemId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.sharepointIds.listItemUniqueId]"
+                      dataType="guid"
+                      name="remoteItem.sharepointIds.listItemUniqueId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.sharepointIds.siteId]"
+                      dataType="guid"
+                      name="remoteItem.sharepointIds.siteId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.sharepointIds.siteUrl]"
+                      dataType="wstr"
+                      length="4000"
+                      name="remoteItem.sharepointIds.siteUrl" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.sharepointIds.syncResourceId]"
+                      dataType="wstr"
+                      length="4000"
+                      name="remoteItem.sharepointIds.syncResourceId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.sharepointIds.tenantDisplayName]"
+                      dataType="wstr"
+                      length="4000"
+                      name="remoteItem.sharepointIds.tenantDisplayName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.sharepointIds.tenantId]"
+                      dataType="guid"
+                      name="remoteItem.sharepointIds.tenantId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.sharepointIds.webId]"
+                      dataType="guid"
+                      name="remoteItem.sharepointIds.webId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.size]"
+                      dataType="i8"
+                      name="remoteItem.size" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.Type]"
+                      dataType="wstr"
+                      length="4000"
+                      name="remoteItem.Type" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.webDavUrl]"
+                      dataType="wstr"
+                      length="4000"
+                      name="remoteItem.webDavUrl" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[remoteItem.webUrl]"
+                      dataType="wstr"
+                      length="4000"
+                      name="remoteItem.webUrl" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[size]"
+                      dataType="i8"
+                      name="size" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[video.bitrate]"
+                      dataType="i4"
+                      name="video.bitrate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[video.duration]"
+                      dataType="i8"
+                      name="video.duration" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[video.height]"
+                      dataType="i4"
+                      name="video.height" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[video.width]"
+                      dataType="i4"
+                      name="video.width" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].ExternalColumns[webUrl]"
+                      dataType="wstr"
+                      length="4000"
+                      name="webUrl" />
+                  </externalMetadataColumns>
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Premium File System Destination"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="KingswaySoft Inc.; http://www.kingswaysoft.com; support@kingswaysoft.com; Copyright (c) 2011-2018 KingswaySoft Inc."
+              description="Write local or cloud file system data managed by supported Premium File Pack Connection Managagers."
+              name="Premium File System Destination"
+              usesDispositions="true">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how data is written to the Flat File."
+                  expressionType="Notify"
+                  name="Action"
+                  typeConverter="KingswaySoft.IntegrationToolkit.PremiumFilePack.Shared.DestinationAction">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how data is written to the Flat File."
+                  expressionType="Notify"
+                  name="DuplicateMode"
+                  typeConverter="KingswaySoft.IntegrationToolkit.PremiumFilePack.Shared.DuplicateMode">1</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">KingswaySoft.IntegrationToolkit.PremiumFilePack.Shared.PremiumFileSystemDestinationComponent</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Premium File System Destination.Inputs[Primary Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Primary Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Premium File System Destination.Inputs[Primary Input].Columns[name]"
+                      cachedDataType="wstr"
+                      cachedLength="4000"
+                      cachedName="name"
+                      externalMetadataColumnId="Package\Data Flow Task\Premium File System Destination.Inputs[Primary Input].ExternalColumns[Name]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[name]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Premium File System Destination.Inputs[Primary Input].Columns[createdDateTime]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="createdDateTime"
+                      externalMetadataColumnId="Package\Data Flow Task\Premium File System Destination.Inputs[Primary Input].ExternalColumns[CreationTime]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[createdDateTime]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Premium File System Destination.Inputs[Primary Input].Columns[file_content]"
+                      cachedDataType="image"
+                      cachedName="file_content"
+                      externalMetadataColumnId="Package\Data Flow Task\Premium File System Destination.Inputs[Primary Input].ExternalColumns[FileContent]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[file_content]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Premium File System Destination.Inputs[Primary Input].Columns[remoteItem.webUrl]"
+                      cachedDataType="wstr"
+                      cachedLength="4000"
+                      cachedName="remoteItem.webUrl"
+                      externalMetadataColumnId="Package\Data Flow Task\Premium File System Destination.Inputs[Primary Input].ExternalColumns[PathToParent]"
+                      lineageId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output].Columns[remoteItem.webUrl]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Premium File System Destination.Inputs[Primary Input].ExternalColumns[CreationTime]"
+                      dataType="dbTimeStamp"
+                      name="CreationTime" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Premium File System Destination.Inputs[Primary Input].ExternalColumns[FileContent]"
+                      dataType="image"
+                      name="FileContent" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Premium File System Destination.Inputs[Primary Input].ExternalColumns[HasReparsePoint]"
+                      dataType="bool"
+                      name="HasReparsePoint" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Premium File System Destination.Inputs[Primary Input].ExternalColumns[IsArchive]"
+                      dataType="bool"
+                      name="IsArchive" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Premium File System Destination.Inputs[Primary Input].ExternalColumns[IsCompressed]"
+                      dataType="bool"
+                      name="IsCompressed" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Premium File System Destination.Inputs[Primary Input].ExternalColumns[IsContentIndexed]"
+                      dataType="bool"
+                      name="IsContentIndexed" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Premium File System Destination.Inputs[Primary Input].ExternalColumns[IsDirectory]"
+                      dataType="bool"
+                      name="IsDirectory" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Premium File System Destination.Inputs[Primary Input].ExternalColumns[IsEncrypted]"
+                      dataType="bool"
+                      name="IsEncrypted" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Premium File System Destination.Inputs[Primary Input].ExternalColumns[IsHidden]"
+                      dataType="bool"
+                      name="IsHidden" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Premium File System Destination.Inputs[Primary Input].ExternalColumns[IsNormal]"
+                      dataType="bool"
+                      name="IsNormal" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Premium File System Destination.Inputs[Primary Input].ExternalColumns[IsOffline]"
+                      dataType="bool"
+                      name="IsOffline" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Premium File System Destination.Inputs[Primary Input].ExternalColumns[IsReadOnly]"
+                      dataType="bool"
+                      name="IsReadOnly" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Premium File System Destination.Inputs[Primary Input].ExternalColumns[IsSparseFile]"
+                      dataType="bool"
+                      name="IsSparseFile" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Premium File System Destination.Inputs[Primary Input].ExternalColumns[IsSystem]"
+                      dataType="bool"
+                      name="IsSystem" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Premium File System Destination.Inputs[Primary Input].ExternalColumns[IsTemporary]"
+                      dataType="bool"
+                      name="IsTemporary" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Premium File System Destination.Inputs[Primary Input].ExternalColumns[LastAccessTime]"
+                      dataType="dbTimeStamp"
+                      name="LastAccessTime" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Premium File System Destination.Inputs[Primary Input].ExternalColumns[LastWriteTime]"
+                      dataType="dbTimeStamp"
+                      name="LastWriteTime" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Premium File System Destination.Inputs[Primary Input].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Premium File System Destination.Inputs[Primary Input].ExternalColumns[PathToParent]"
+                      dataType="wstr"
+                      length="4000"
+                      name="PathToParent" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Premium File System Destination.Outputs[Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Error Output"
+                  synchronousInputId="Package\Data Flow Task\Premium File System Destination.Inputs[Primary Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Premium File System Destination.Outputs[Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Premium File System Destination.Outputs[Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Premium File System Destination.Outputs[Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Premium File System Destination.Outputs[Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Premium File System Destination.Outputs[Error Output].Columns[ErrorMessage]"
+                      dataType="wstr"
+                      length="2048"
+                      lineageId="Package\Data Flow Task\Premium File System Destination.Outputs[Error Output].Columns[ErrorMessage]"
+                      name="ErrorMessage" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Premium File System Destination.Outputs[Default Output]"
+                  exclusionGroup="1"
+                  name="Default Output"
+                  synchronousInputId="Package\Data Flow Task\Premium File System Destination.Inputs[Primary Input]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[Primary Output]"
+              endId="Package\Data Flow Task\Premium File System Destination.Inputs[Primary Input]"
+              name="Primary Output"
+              startId="Package\Data Flow Task\OneDrive Source.Outputs[Primary Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="152,42.6666666666667"
+          Id="Package\Data Flow Task"
+          TopLeft="139.791664583609,38.8916659712295" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="158.666666666667,42.6666666666667"
+          Id="Package\Data Flow Task\OneDrive Source"
+          TopLeft="131.770831369795,51.4583324131867" />
+        <NodeLayout
+          Size="234.666666666667,42.6666666666667"
+          Id="Package\Data Flow Task\Premium File System Destination"
+          TopLeft="92.7083319518716,158.166663838426" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Primary Output]"
+          TopLeft="210.572914994167,94.1249990798533">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,64.0416647585729"
+              Start="0,0"
+              End="0,56.5416647585729">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,56.5416647585729" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

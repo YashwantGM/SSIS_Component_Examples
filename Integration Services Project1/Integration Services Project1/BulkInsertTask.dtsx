@@ -1,0 +1,137 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/14/2018 12:18:48 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="CIPL-0023"
+  DTS:CreatorName="CIPL-0023\Developer"
+  DTS:DTSID="{5307D67D-C67C-4F0A-8172-87EC297A3AB0}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.0900.30"
+  DTS:LocaleID="16393"
+  DTS:ObjectName="BulkInsertTask"
+  DTS:PackageType="5"
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{F54EF180-4750-45F4-8240-80176225C043}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[CIPL-0023\MSSQLDEVLOPER.Sample]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{1A95009E-D8D1-444F-9048-27C1173B8065}"
+      DTS:ObjectName="CIPL-0023\MSSQLDEVLOPER.Sample">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=CIPL-0023\MSSQLDEVLOPER;Initial Catalog=Sample;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Employeefile1.txt]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{5853D44D-A8CA-4366-BC79-BE6A53FB8672}"
+      DTS:ObjectName="Employeefile1.txt">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::filepath]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="D:\MyLearning\Employees" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{63F9B7E8-6F87-4137-BE41-339B94F5FC63}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="filepath">
+      <DTS:VariableValue
+        DTS:DataType="8">D:\MyLearning\Employees</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Foreach Loop Container"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{09E195DD-0C48-47B1-8655-73A394FAE989}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Foreach Loop Container">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{EE8C897C-24A7-4A78-8CAF-4AB9898E55F9}"
+        DTS:ObjectName="{EE8C897C-24A7-4A78-8CAF-4AB9898E55F9}">
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="D:\MyLearning\Employees" />
+            <FEFEProperty
+              FileSpec="*.txt" />
+            <FEFEProperty
+              FileNameRetrievalType="0" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\Bulk Insert Task"
+          DTS:CreationName="Microsoft.BulkInsertTask"
+          DTS:Description="Bulk Insert Task"
+          DTS:DTSID="{7F801A16-1C72-4A02-A893-DA3C477C5880}"
+          DTS:ExecutableType="Microsoft.BulkInsertTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Bulk Insert Task"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <BulkInsertTask:BulkInsertTaskData
+              BulkInsertTask:SourceConnectionName="{5853D44D-A8CA-4366-BC79-BE6A53FB8672}"
+              BulkInsertTask:DestinationConnectionName="{1A95009E-D8D1-444F-9048-27C1173B8065}"
+              BulkInsertTask:DestinationTableName="[dbo].[Employee]"
+              BulkInsertTask:FieldTerminator="Comma {,}" xmlns:BulkInsertTask="www.microsoft.com/sqlserver/dts/tasks/bulkinserttask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{460A6B4D-27FC-4652-9758-E3C9E1423312}"
+          DTS:ObjectName="{460A6B4D-27FC-4652-9758-E3C9E1423312}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::filepath" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="156,42.6666666666667"
+          Id="Package\Foreach Loop Container\Bulk Insert Task"
+          TopLeft="23.7499978579581,9.69999746620661" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="205.333333333334,82.6666666666667"
+          Size="205.333333333334,126"
+          Id="Package\Foreach Loop Container"
+          TopLeft="151.04166441597,12.8916664361456" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
